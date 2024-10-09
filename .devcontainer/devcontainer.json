@@ -4,21 +4,21 @@
     "context": "..",
     "remoteUser": "node",
     "customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			"settings": {
-                "terminal.integrated.shell.linux": "/bin/bash",
-                "editor.formatOnSave": true
-            },
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "github.vscode-pull-request-github",
-                "dsznajder.es7-react-js-snippets",
-                "streetsidesoftware.code-spell-checker"
-			]
-		}
-	},
+		  // Configure properties specific to VS Code.
+		  "vscode": {
+		    "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash",
+          "editor.formatOnSave": true
+        },
+		    "extensions": [
+				  "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "github.vscode-pull-request-github",
+          "dsznajder.es7-react-js-snippets",
+          "streetsidesoftware.code-spell-checker"
+			  ]
+		  }
+	  },
     "forwardPorts": [3000],
     "postCreateCommand": "yarn install",
     "mounts": [
