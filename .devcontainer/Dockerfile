@@ -1,5 +1,5 @@
 # Use an official Node.js image as a base
-FROM node:18-bullseye
+FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /workspace
