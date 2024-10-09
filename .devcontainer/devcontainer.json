@@ -1,0 +1,48 @@
+{
+    "name": "Next.js Dev Container",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "remoteUser": "node",
+    "customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "editor.formatOnSave": true
+            },
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "github.vscode-pull-request-github",
+                "dsznajder.es7-react-js-snippets",
+                "streetsidesoftware.code-spell-checker"
+			]
+		}
+	},
+    "forwardPorts": [3000],
+    "postCreateCommand": "yarn install",
+    "mounts": [
+    //   "source=/home/node/.npm,target=/home/node/.npm,type=bind",
+    //   "source=/home/node/.ssh,target=/home/node/.ssh,type=bind"
+    ],
+    "remoteEnv": {
+      "NODE_ENV": "development"
+    },
+    "containerEnv": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    },
+    "runArgs": [
+      "--init",
+      "--cap-add=SYS_PTRACE",
+      "--security-opt",
+      "seccomp=unconfined"
+    ],
+    "features": {
+      "node": {
+        "version": "18"
+      },
+      "docker-in-docker": {
+        "version": "latest"
+      }
+    }
+}  
